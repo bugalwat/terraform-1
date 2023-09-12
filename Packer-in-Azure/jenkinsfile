@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage('version'){
+            step{
+                sh 'pwsh --version'
+            }
+        }
+        stage('hello'){
+            step{
+                sh 'pwsh hello.ps1'
+            }
+        }
+    }
+}
